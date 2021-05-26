@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h2>Liste des Snowflakes</h2>
+    <div class="snowflakes">
+        {% for snowflake in snowflakes %}
+            <div class="snowflake">
+                {# <h3><a href="/snowflake/{{snowflake.id}}">{{snowflake.name}}</a></h3> #}
+                <h3><a href="{{path('appli_snowflake_show', {id:snowflake.id})}}">{{snowflake.name}}</a></h3>
+                <p>Le nombre mystère : {{snowflake.luckyNumber}}</p>
+                <p>Description : {{snowflake.description}}</p>
+                <p>Date de création : {{snowflake.createdAt|date('j M Y')}}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

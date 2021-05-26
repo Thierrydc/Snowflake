@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+<div class="example-wrapper">
+    <div class="snowflake">
+        <h1>{{snowflake.name}}</h1>
+            <p>Le nombre mystère : {{snowflake.luckyNumber}}</p>
+            <p>Description : {{snowflake.description}}</p>
+            <p>Date de création : {{snowflake.createdAt|date('j M Y')}}</p>
+    </div>
+</div>
+{% endblock %}
