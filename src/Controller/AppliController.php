@@ -29,7 +29,7 @@ class AppliController extends AbstractController
     }
 
     /**
-     * @Route("/random/{mynumber}", name="app_appli_mynumber")
+     * @Route("/random/{mynumber<\d+>}", name="app_appli_mynumber")
      */
     public function mynumber(int $mynumber): Response
     {

@@ -26,7 +26,7 @@ class SnowflakeController extends AbstractController
     }
 
     /**
-     * @Route("/snowflake/{id}", name="appli_snowflake_show")
+     * @Route("/snowflake/{id<\d+>}", name="appli_snowflake_show")
      */
     public function show(int $id, SnowflakeRepository $snowflakeRepository): Response
     {
